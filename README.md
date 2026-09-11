@@ -21,4 +21,16 @@ CNN-based traffic sign recognition system that classifies road signs and recomme
 | Traffic Sign | Vehicle Action|
 |- — -|- - -|
 | Stop | Stop Vehicle |
-| Yield
+| Yield| Slow Down and Yield |
+|No Entry| Do not Enter |
+|Speed Limit| Adjust Vehicle Speed |
+|Turn Right| Turn Right|
+
+## How It Works
+
+1. User uploads a traffic sign image.
+2. The image is resized and preprocessed.
+3. The trained CNN analyzes the image.
+4. The model predicts the traffic sign class.
+5. The application displays the prediction and confidence score.
+6. The prediction is mapped to an autonomous vehicle action.
