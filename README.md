@@ -1,36 +1,107 @@
-# AI-Traffic-Sign-Recongnition
-CNN-based traffic sign recognition system that classifies road signs and recommends autonomous vehicle actions using TensorFlow and Streamlit
+# 🚦 AI Traffic Sign Recognition for Autonomous Vehicles
 
-## Features
-- CNN-based traffic sign classification
-- Recognizes Stop, Yield, No Entry, Speed Limit, and Turn Right signs
+An AI-powered traffic sign recognition system that uses deep learning to classify traffic signs from uploaded images and recommend an appropriate autonomous vehicle action.
+
+## 🌐 Live Demo
+
+Try the deployed application:
+
+https://ai-traffic-sign-recongnition-wxn6jhqwkzeuyypotugty9.streamlit.app
+
+## 🎯 Project Overview
+
+Traffic sign recognition is an important component of autonomous driving systems.
+
+This project demonstrates an end-to-end machine learning pipeline that:
+
+- Processes traffic sign image data
+- Trains an image classification model
+- Recognizes traffic signs from uploaded images
 - Displays prediction confidence
-- Recommendds an autonomous vehicle action for each prediction
-- Interactive image upload using Streamlit
+- Maps predictions to autonomous vehicle actions
+- Provides an interactive web interface using Streamlit
 
-## Technologies
-- Python
-- TensorFlow/ Keras
-- Streamlit
-- NumPy
-- Pillow
-- GTSRB Database
+## 🚘 Supported Traffic Signs
 
-## Supported Traffic Signs
+The current model recognizes five traffic sign categories:
 
-| Traffic Sign | Vehicle Action|
-|- — -|- - -|
+| Traffic Sign | Autonomous Vehicle Action |
+|---|---|
 | Stop | Stop Vehicle |
-| Yield| Slow Down and Yield |
-|No Entry| Do not Enter |
-|Speed Limit| Adjust Vehicle Speed |
-|Turn Right| Turn Right|
+| Yield | Slow Down and Yield |
+| No Entry | Do Not Enter |
+| Turn Right | Turn Right |
+| Speed Limit | Adjust Vehicle Speed |
 
-## How It Works
+## 🧠 Machine Learning Pipeline
 
-1. User uploads a traffic sign image.
-2. The image is resized and preprocessed.
-3. The trained CNN analyzes the image.
-4. The model predicts the traffic sign class.
-5. The application displays the prediction and confidence score.
-6. The prediction is mapped to an autonomous vehicle action.
+1. Prepare and organize traffic sign image data
+2. Preprocess and resize images
+3. Split data into training and validation sets
+4. Train the image classification model
+5. Evaluate model performance on validation data
+6. Save the trained model
+7. Load the model in the Streamlit application
+8. Run inference on user-uploaded images
+9. Convert the predicted traffic sign into a vehicle action
+
+## 🛠️ Technologies Used
+
+- Python
+- PyTorch
+- Computer Vision
+- Pillow
+- NumPy
+- Streamlit
+- Git & GitHub
+- GitHub Codespaces
+- Streamlit Community Cloud
+
+## 📊 Model Results
+
+During training, the model achieved approximately **99% validation accuracy** on the project's validation dataset.
+
+> Validation accuracy reflects performance on the prepared dataset and does not guarantee equivalent performance on unseen real-world traffic images.
+
+## 💻 Application
+
+Users can upload a JPG or PNG traffic sign image.
+
+The application displays:
+
+- Uploaded traffic sign
+- Predicted traffic sign class
+- Model confidence
+- Recommended autonomous vehicle action
+
+Example:
+
+**Prediction:** Yield  
+**Confidence:** 99.31%  
+**Vehicle Action:** Slow Down and Yield
+
+## 📁 Project Structure
+
+AI-Traffic-Sign-Recognition/
+├── app.py
+├── train_model.py
+├── download_dataset.py
+├── traffic_sign_model.pth
+├── requirements.txt
+└── README.md
+
+## 🚀 Future Improvements
+
+- Expand recognition to additional traffic sign categories
+- Train with a larger and more diverse dataset
+- Improve performance on real-world images
+- Add confidence-based handling for uncertain predictions
+- Evaluate performance using precision, recall, F1-score, and a confusion matrix
+- Explore real-time traffic sign recognition from video
+
+## 👨‍💻 Author
+
+**Shashank Aravapalli**
+
+B.S. Robotics  
+University of California, Riverside
